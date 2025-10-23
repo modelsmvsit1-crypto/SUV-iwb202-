@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>Add App</title>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="myFunctions.js"></script>
+</head>
+<body>
+<header>
+  <h1>إضافة تطبيق جديد</h1>
+  <nav>
+    <a href="index.html">الرئيسية</a>
+    <a href="AboutUs.html">من نحن</a>
+    <a href="apps.html">التطبيقات</a>
+    <a href="add_app.html">إضافة تطبيق</a>
+  </nav>
+</header>
+
+<div class="container">
+  <form onsubmit="return validateForm()">
+    <label>اسم التطبيق:</label>
+    <input type="text" id="appName" placeholder="AppName (English letters only)">
+
+    <label>الشركة المصنعة:</label>
+    <input type="text" id="companyName" placeholder="CompanyName (English letters only)">
+
+    <label>الموقع الإلكتروني:</label>
+    <input type="url" id="website" placeholder="https://example.com">
+
+    <label>مجاني:</label>
+    <select id="isFree"><option value="yes">نعم</option><option value="no">لا</option></select>
+
+    <label>مجال الاستخدام:</label>
+    <select id="category">
+      <option value="Education">Education</option>
+      <option value="E-commerce">E-commerce</option>
+      <option value="Robotics">Robotics</option>
+    </select>
+
+    <label>شرح مختصر:</label>
+    <textarea id="description" rows="4"></textarea>
+
+    <button type="submit">إرسال</button>
+    <button type="reset">إعادة</button>
+  </form>
+</div>
+<br><br>
+<footer>
+  <p>© 2025 جميع الحقوق محفوظة</p>
+</footer>
+</body>
+</html>

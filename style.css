@@ -1,0 +1,286 @@
+/* ملف التنسيق العام لجميع الصفحات */
+body {font-family: Arial, sans-serif; background-color: #f8f9fa; margin: 0; padding: 0; color: #333;}
+header, footer {background-color: #222; color: white; text-align: center; padding: 15px 0;}
+nav a {color: white; margin: 0 15px; text-decoration: none;}
+nav a:hover {text-decoration: underline;}
+.container {width: 80%; margin: 20px auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);}
+table {width: 100%; border-collapse: collapse;}
+th, td {border: 1px solid #ddd; padding: 8px; text-align: center;}
+th {background-color: #007bff; color: white;}
+button {background-color: #007bff; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer;}
+button:hover {background-color: #0056b3;}
+input, select, textarea {width: 100%; padding: 8px; margin: 5px 0 15px; border: 1px solid #ccc; border-radius: 4px;}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 25px;
+    background: linear-gradient( #000000 100%);
+    color: white;
+    border-radius: 12px;
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+.page-header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    transform: translate(-30px, 30px);
+}
+
+.page-header h1 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.page-header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+}
+
+
+.students-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.list-header {
+    background: linear-gradient(to right, #000000, #000000);
+    color: white;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.student-item:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.student-item:last-child {
+    border-bottom: none;
+}
+
+.student-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.student-name {
+    font-weight: bold;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    color: #2c3e50;
+}
+
+.student-details {
+    display: flex;
+    gap: 20px;
+    font-size: 0.92rem;
+    color: #555;
+}
+
+.student-id {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+
+.page-footer {
+    text-align: center;
+    padding: 15px;
+    background: #2c3e50;
+    color: white;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+
+.student-item:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.student-item:nth-child(even):hover {
+    background-color: #f0f0f0;
+}
+
+
+/* تنسيق الجداول */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #007bff;
+  color: white;
+}
+
+/* أزرار */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+/* الحقول */
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    .page-header {
+        padding: 20px 15px;
+    }
+    
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .list-header, .student-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .list-header {
+        display: none;
+    }
+    
+    .student-details {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    
+    .student-id {
+        align-self: flex-start;
+        margin-top: 10px;
+    }
+    
+    .student-item::before {
+        content: "الطالب";
+        font-weight: bold;
+        color: #3498db;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .student-name {
+        font-size: 1.05rem;
+    }
+    
+    .student-details {
+        font-size: 0.85rem;
+    }
+}
+
+
+.student-item {
+    cursor: pointer;
+}
+
+.student-item:active {
+    transform: scale(0.99);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
